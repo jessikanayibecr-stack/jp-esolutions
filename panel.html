@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Panel de Control</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+/* BARRA SUPERIOR */
+.header {
+    background: #142850;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.header img {
+    width: 90px;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+/* TITULO */
+.titulo {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+
+/* CONTENEDOR */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+/* TARJETAS */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* BOTONES */
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #1e3c72;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #16325c;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- BARRA -->
+<div class="header">
+    <img src="logo.png">
+    <h2>Sistema de Citas</h2>
+</div>
+
+<!-- TITULO -->
+<h1 class="titulo">Panel de Control</h1>
+
+<!-- OPCIONES -->
+<div class="container">
+
+    <div class="card">
+        <h3>Agendar Cita</h3>
+        <a href="citas.html">
+            <button>Entrar</button>
+        </a>
+    </div>
+
+    <div class="card">
+        <h3>Ver Citas</h3>
+        <a href="vercitas.html">
+            <button>Entrar</button>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

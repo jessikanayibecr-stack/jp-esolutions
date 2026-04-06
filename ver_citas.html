@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gestión de Citas</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+<img src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png" class="logo">
+<div class="title">Sistema de Citas</div>
+</div>
+
+<!-- CONTENIDO -->
+<div class="main">
+
+<div class="card">
+
+<h2>Total citas: <span id="total"></span></h2>
+
+<table>
+<thead>
+<tr>
+<th>Cliente</th>
+<th>Servicio</th>
+<th>Fecha</th>
+<th>Hora</th>
+<th>Estado</th>
+<th>Acción</th>
+</tr>
+</thead>
+
+<tbody id="tabla"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script>
+let citas = JSON.parse(localStorage.getItem("citas")) || [];
+
+let tabla = document.getElementById("tabla");
+let total = document.getElementById("total");
+
+total.innerText = citas.length;
+
+function mostrar(){
+    tabla.innerHTML = "";
+
+    citas.forEach((c, i) => {
+        tabla.innerHTML += `
+        <tr>
+            <td>${c.nombre}</td>
+            <td>${c.servicio}</td>
+            <td>${c.fecha}</td>
+            <td>${c.hora}</td>
+            <td><span style="color:orange;">Pendiente</span></td>
+            <td><button onclick="eliminar(${i})">X</button></td>
+        </tr>
+        `;
+    });
+}
+
+function eliminar(i){
+    citas.splice(i,1);
+    localStorage.setItem("citas", JSON.stringify(citas));
+    mostrar();
+    total.innerText = citas.length;
+}
+
+mostrar();
+</script>
+
+</body>
+</html>

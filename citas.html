@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendar Cita</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            width: 120px;
+            display: block;
+            margin: 30px auto 10px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #1e3c72;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #16325c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LOGO -->
+    <img src="logo.png" class="logo">
+
+    <!-- TITULO -->
+    <h1>Agendar Cita</h1>
+
+    <!-- FORMULARIO -->
+    <div class="container">
+
+        <input type="text" placeholder="Nombre del cliente">
+
+        <select>
+            <option>Reparación</option>
+            <option>Mantenimiento</option>
+            <option>Instalación</option>
+        </select>
+
+        <input type="date">
+        <input type="time">
+
+        <textarea placeholder="Descripción"></textarea>
+
+        <button>Guardar Cita</button>
+
+    </div>
+
+</body>
+</html>
